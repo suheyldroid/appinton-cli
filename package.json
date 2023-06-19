@@ -1,0 +1,52 @@
+{
+  "name": "appinton-cli",
+  "version": "1.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "try": "yarn build && node dist/main.js",
+    "try:public": "sudo npm uninstall -g cli && yarn build && sudo npm install -g ."
+  },
+  "type": "module",
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "apisauce": "^3.0.0",
+    "axios": "^1.4.0",
+    "chalk": "^4.1.2",
+    "commander": "^10.0.0",
+    "config": "^3.3.9",
+    "config-file-ts": "^0.2.4",
+    "confinode": "^2.1.1",
+    "figlet": "^1.5.2",
+    "git-clone": "^0.2.0",
+    "inquirer": "^8.0.0",
+    "loadjs": "4.3.0-rc1",
+    "rollup-plugin-preserve-shebang": "^1.0.1",
+    "rollup-plugin-ts": "^3.2.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "vite": "^4.3.9"
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7.20.1",
+    "@types/chalk": "^2.2.0",
+    "@types/commander": "^2.12.2",
+    "@types/config": "^3.3.0",
+    "@types/figlet": "^1.5.5",
+    "@types/git-clone": "^0.2.0",
+    "@types/inquirer": "^9.0.3",
+    "@types/loadjs": "^4.0.1",
+    "@types/node": "^18.11.18",
+    "tslib": "^2.5.3",
+    "typescript": "^4.9.4"
+  },
+  "bin": {
+    "appinton-cli": "./dist/main.js"
+  },
+  "files": [
+    "dist"
+  ]
+}
